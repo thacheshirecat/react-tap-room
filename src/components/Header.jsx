@@ -16,9 +16,9 @@ function Header(){
             color: gold;
             background-color: green;
           }
-            `}</style>
-          <h1>Greenfrog Tap Room</h1>
-          <Link to='/'><button className='btn'>Home</button></Link>
+      `}</style>
+      <h1>Greenfrog Tap Room</h1>
+      <Link to='/'><button className='btn'>Home</button></Link> ~ <Link to='/brews'><button className='btn'>Brews</button></Link>
     </div>
   );
 }

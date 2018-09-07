@@ -3,21 +3,6 @@ import React from 'react';
 function Home(){
   return(
     <div className="container">
-      <style global jsx>{`
-          h2 {
-            margin-top: 10px;
-            color: green;
-            text-align: center;
-          }
-          .card {
-            background-color: gold;
-          }
-          body {
-            background-image: url(https://www.zastavki.com/pictures/originals/2015/Backgrounds_Light_green_gradient_background_107689_.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-          }
-            `}</style>
       <h2>Welcome to the Tap Room!</h2>
       <div className="card">
         <h3>Premium Brews~</h3>
