@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 function Brew(props){
   return(
-    <div>
+    <div className='card'>
       <style jsx>{`
-          div {
-            background-color: gold;
-            color: green;
+          .card {
+            margin: auto;
+            width: 50%;
           }
       `}</style>
       <h3>{props.name} / {props.abv}</h3>
-      <p>By: {props.brewer}</p>
       <p>{props.description}</p>
-      <p>Price: {props.price}</p>
-      <p>Remaining Stock: {props.remaining}</p>
+      <p>By: {props.brewer}</p>
+      <p>Price: ${props.price} per Pint</p>
+      <p>Remaining Stock: {props.remaining} Pints</p>
     </div>
   );
 }

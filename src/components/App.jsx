@@ -21,7 +21,7 @@ function App()
             padding: 10px;
           }
           body {
-            background-image: url(https://www.zastavki.com/pictures/originals/2015/Backgrounds_Light_green_gradient_background_107689_.jpg);
+            background-image: url("../assets/images/bg.jpg");
             background-repeat: no-repeat;
             background-size: cover;
           }
