@@ -5,6 +5,7 @@ import Header from './Header';
 import Home from './Home';
 import BrewList from './BrewList'
 import Brew from './Brew'
+import Error404 from './Error404'
 
 function App()
 {
@@ -21,7 +22,7 @@ function App()
             padding: 10px;
           }
           body {
-            background-image: url("../assets/images/bg.jpg");
+            background-image: url(https://raw.githubusercontent.com/thacheshirecat/react-tap-room/master/src/assets/images/bg.jpg);
             background-repeat: no-repeat;
             background-size: cover;
           }
@@ -30,6 +31,7 @@ function App()
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/brews' component={BrewList} />
+        <Route component={Error404} />
       </Switch>
     </div>
   );
