@@ -24,5 +24,12 @@
   * Run $ npm run start
   * Navigate to LocalHost:8080 in your browser
 
+##### Issues / Questions
+  * At this point there have not been any unforeseen issues in the development process. Installation and set up of the React Environment went smoothly, each component has been working as intended.
+  * One question is whether global jsx styling can be added to child components or only the App component? If I add global styling to a child of App, would only that child and any of that child's children get those 'global' styling rules? I initial added global styling rules to Home which was a child of App but had no children, then later had to move those 'global' rules up into App.
+
+##### Thoughts on React vs Angular
+  * Forthcoming
+
 ###### Licensing
   * This code utilizes an MIT license
