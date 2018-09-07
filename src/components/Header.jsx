@@ -20,7 +20,7 @@ function Header(){
           <h1>Greenfrog Tap Room</h1>
           <Link to='/'><button className='btn'>Home</button></Link>
     </div>
-  )
+  );
 }
 
 export default Header;
