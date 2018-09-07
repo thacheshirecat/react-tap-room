@@ -5,6 +5,7 @@ import Header from './Header';
 import Home from './Home';
 import BrewList from './BrewList'
 import Brew from './Brew'
+import NewBrew from './NewBrew'
 import Error404 from './Error404'
 
 function App()
@@ -30,7 +31,8 @@ function App()
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/brews' component={BrewList} />
+        <Route exact path='/brews' component={BrewList} />
+        <Route exact path='/newbrews' component={NewBrew} />
         <Route component={Error404} />
       </Switch>
     </div>

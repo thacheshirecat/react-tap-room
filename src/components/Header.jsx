@@ -11,6 +11,7 @@ function Header(){
             background-color: gold;
             text-align: center;
             font-family: Trebuchet MS;
+            border: 1px solid yellow;
           }
           button {
             color: gold;
@@ -18,7 +19,7 @@ function Header(){
           }
       `}</style>
       <h1>Greenfrog Tap Room</h1>
-      <Link to='/'><button className='btn'>Home</button></Link> ~ <Link to='/brews'><button className='btn'>Brews</button></Link>
+      <Link to='/'><button className='btn'>Home</button></Link> ~ <Link to='/brews'><button className='btn'>Brews</button></Link> ~ <Link to='/newbrews'><button className='btn'>New Brew</button></Link>
     </div>
   );
 }
