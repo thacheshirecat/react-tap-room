@@ -15,6 +15,7 @@ function Brew(props){
       <p>By: {props.brewer}</p>
       <p>Price: ${props.price} per Pint</p>
       <p>Remaining Stock: {props.remaining} Pints</p>
+      <button className='btn btn-danger'>Sell Pint</button><button className='btn btn-warning'>Edit Brew</button>
     </div>
   );
 }
