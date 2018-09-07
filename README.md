@@ -1,1 +1,1 @@
-![alt text]( react-tap-room/src/assets/images/TapRoomMap.png )
+![alt text](https://raw.githubusercontent.com/thacheshirecat/react-tap-room/master/src/assets/images/TapRoomMap.png)
