@@ -6,6 +6,7 @@ import Home from './Home';
 import BrewList from './BrewList'
 import Brew from './Brew'
 import NewBrew from './NewBrew'
+import About from './About'
 import Error404 from './Error404'
 
 function App()
@@ -33,6 +34,7 @@ function App()
         <Route exact path='/' component={Home} />
         <Route exact path='/brews' component={BrewList} />
         <Route exact path='/newbrews' component={NewBrew} />
+        <Route exact path='/about' component={About} />
         <Route component={Error404} />
       </Switch>
     </div>
