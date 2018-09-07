@@ -1,1 +1,1 @@
-![alt text](http://url/to/img.png)
+![alt text]( react-tap-room/src/assets/images/TapRoomMap.png )
