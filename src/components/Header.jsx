@@ -19,7 +19,7 @@ function Header(){
           }
       `}</style>
       <h1>Greenfrog Tap Room</h1>
-      <Link to='/'><button className='btn'>Home</button></Link> ~ <Link to='/brews'><button className='btn'>Brews</button></Link> ~ <Link to='/newbrews'><button className='btn'>New Brew</button></Link> ~ <Link to='/about'><button className='btn'>About Us</button></Link>
+      <Link to='/'><button className='btn'>Home</button></Link> ~ <Link to='/brews'><button className='btn'>Brews</button></Link> ~ <Link to='/about'><button className='btn'>About Us</button></Link> ~ <Link to='/admin'><button className='btn'>Admin</button></Link>
     </div>
   );
 }

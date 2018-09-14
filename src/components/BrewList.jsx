@@ -1,5 +1,5 @@
 import React from 'react';
-import Brew from './Brew'
+import Brew from './Brew';
 
 const masterBrewList = [
   {
@@ -54,20 +54,20 @@ const masterBrewList = [
 
 function BrewList(){
   return(
-      <div>
-        <h2>Brews</h2>
-        <hr />
-        {masterBrewList.map((brew, index) =>
-          <Brew
-            name={brew.name}
-            brewer={brew.brewer}
-            description={brew.description}
-            abv={brew.abv}
-            price={brew.price}
-            remaining={brew.remaining}
-            key={index}/>
-        )}
-      </div>
+    <div>
+      <h2>Brews</h2>
+      <hr />
+      {masterBrewList.map((brew, index) =>
+        <Brew
+          name={brew.name}
+          brewer={brew.brewer}
+          description={brew.description}
+          abv={brew.abv}
+          price={brew.price}
+          remaining={brew.remaining}
+          key={index}/>
+      )}
+    </div>
   );
 }
 

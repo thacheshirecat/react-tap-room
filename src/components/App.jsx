@@ -3,11 +3,10 @@ import { Switch, Route } from 'react-router-dom';
 
 import Header from './Header';
 import Home from './Home';
-import BrewList from './BrewList'
-import Brew from './Brew'
-import NewBrew from './NewBrew'
-import About from './About'
-import Error404 from './Error404'
+import BrewList from './BrewList';
+import About from './About';
+import Admin from './Admin';
+import Error404 from './Error404';
 
 function App()
 {
@@ -33,8 +32,8 @@ function App()
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/brews' component={BrewList} />
-        <Route exact path='/newbrews' component={NewBrew} />
         <Route exact path='/about' component={About} />
+        <Route exact path='/admin' component={Admin} />
         <Route component={Error404} />
       </Switch>
     </div>
