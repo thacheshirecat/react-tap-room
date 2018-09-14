@@ -39,6 +39,13 @@ class App extends React.Component
     };
   }
 
+  handleAddingNewBrew(newBrew)
+  {
+    let newBrewId = v4();
+    let newMasterBrewList = Object.assign({}, this.state.masterBrewList, { [newBrewId]: newBrew });
+    this.setState({masterBrewList: newMasterBrewList});
+  }
+
 
   render()
   {
@@ -76,7 +83,11 @@ class App extends React.Component
               <Admin
                 brewList={this.state.masterBrewList}
                 currentRoute={props.location.pathname} />} />
-          <Route exact path='/admin/newbrew' component={NewBrew} />
+          <Route
+            exact path='/admin/newbrew'
+            render={()=>
+              <NewBrew
+                onNewBrewFormSubmit={this.handleAddingNewBrew} />} />
           <Route component={Error404} />
         </Switch>
       </div>
