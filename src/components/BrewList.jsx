@@ -22,6 +22,7 @@ function BrewList(props)
           remaining={brew.remaining}
           currentRoute={props.currentRoute}
           onBrewSelection={props.onBrewSelection}
+          onSellPintButtonClicked={props.handleSellingPint}
           key={brewId}
           brewId={brewId}/>
       })}
@@ -33,6 +34,7 @@ BrewList.propTypes = {
   brewList: PropTypes.object,
   currentRoute: PropTypes.string,
   onBrewSelection: PropTypes.func,
+  handleSellingPint: PropTypes.func,
   sessionSales: PropTypes.string
 };
 

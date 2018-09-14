@@ -31,7 +31,11 @@ function Brew(props){
           }
       `}</style>
         {brewInfo}
-        <button className='btn btn-danger'>Sell Pint</button>
+        <button
+          onClick={() =>
+            {props.onSellPintButtonClicked(props.brewId);}}
+            className='btn btn-danger'>
+            Sell Pint</button>
         <hr />
       </div>
     );
@@ -69,7 +73,8 @@ Brew.propTypes = {
   price: PropTypes.string.isRequired,
   remaining: PropTypes.string.isRequired,
   brewId: PropTypes.string.isRequired,
-  onBrewSelection: PropTypes.func
+  onBrewSelection: PropTypes.func,
+  onSellPintButtonClicked: PropTypes.func
 };
 
 export default Brew;

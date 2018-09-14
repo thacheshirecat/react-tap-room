@@ -42,6 +42,7 @@ class App extends React.Component
     this.handleChangingSelectedBrew = this.handleChangingSelectedBrew.bind(this);
     this.handleSettingSelectedBrewToNull = this.handleSettingSelectedBrewToNull.bind(this);
     this.handleEditingSelectedBrew = this.handleEditingSelectedBrew.bind(this);
+    this.handleSellingPint = this.handleSellingPint.bind(this);
   }
 
   handleAddingNewBrew(newBrew)
@@ -65,6 +66,24 @@ class App extends React.Component
   handleSettingSelectedBrewToNull()
   {
     this.setState({selectedBrew: null});
+  }
+
+  handleSellingPint(brewId)
+  {
+    let currentBrewAmmount = parseInt(this.state.masterBrewList[brewId].remaining);
+    let newBrewRemaining = (currentBrewAmmount - 1).toString();
+    let currentSales = parseInt(this.state.sessionSales);
+    let newSales = (currentSales + parseInt(this.state.masterBrewList[brewId].price)).toString();
+    if(currentBrewAmmount > 0)
+    {
+      this.state.masterBrewList[brewId].remaining = newBrewRemaining;
+      this.setState({sessionSales: newSales});
+    }
+    else
+    {
+      alert('No brew left to sell!');
+    }
+
   }
 
 
@@ -97,7 +116,8 @@ class App extends React.Component
               <BrewList
                 brewList={this.state.masterBrewList}
                 currentRoute={props.location.pathname}
-                sessionSales={this.state.sessionSales} />} />
+                sessionSales={this.state.sessionSales}
+                handleSellingPint={this.handleSellingPint} />} />
           <Route exact path='/about' component={About} />
           <Route
             exact path='/admin'
