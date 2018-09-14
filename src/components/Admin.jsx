@@ -6,6 +6,7 @@ import BrewList from './BrewList';
 
 function Admin(props)
 {
+  console.log(props.brewList)
   return (
     <div>
       <style jsx>{`
@@ -15,13 +16,14 @@ function Admin(props)
       `}</style>
       <h2>Admin</h2>
       <h3><Link to='/admin/newbrew'>Add New Brew</Link></h3>
-      <BrewList brewList={props.BrewList} />
+      <BrewList brewList={props.brewList} />
     </div>
   );
 }
 
 Admin.propTypes = {
-  brewList: PropTypes.object
+  brewList: PropTypes.object,
+  currentRoute: PropTypes.string
 };
 
 export default Admin;
