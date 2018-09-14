@@ -52,6 +52,7 @@ class App extends React.Component
 
   handleEditingSelectedBrew(edittedBrew)
   {
+    this.state.masterBrewList[this.state.selectedBrew] = edittedBrew;
     this.setState({selectedBrew: null});
   }
 

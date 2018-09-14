@@ -12,7 +12,7 @@ function EditBrew(props)
 
   function handleBrewFormSubmit()
   {
-    props.handleBrewFormSubmit();
+    props.onBrewFormSubmit({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value});
   }
 
   return(
