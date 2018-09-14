@@ -8,8 +8,20 @@ import About from './About';
 import Admin from './Admin';
 import Error404 from './Error404';
 
-function App()
+class App extends React.Component
 {
+
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      masterBrewList = {},
+      selectedBrew: null
+    };
+  }
+
+
+
   return (
     <div className="container">
       <style jsx global>{`
@@ -34,6 +46,7 @@ function App()
         <Route exact path='/brews' component={BrewList} />
         <Route exact path='/about' component={About} />
         <Route exact path='/admin' component={Admin} />
+        <Route exact path='/admin/newbrew' component={NewBrew} />
         <Route component={Error404} />
       </Switch>
     </div>
