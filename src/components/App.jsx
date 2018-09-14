@@ -38,6 +38,7 @@ class App extends React.Component
       selectedBrew: null
     };
     this.handleAddingNewBrew = this.handleAddingNewBrew.bind(this);
+    this.handleChangingSelectedBrew = this.handleChangingSelectedBrew.bind(this);
   }
 
   handleAddingNewBrew(newBrew)
@@ -45,6 +46,11 @@ class App extends React.Component
     let newBrewId = v4();
     let newMasterBrewList = Object.assign({}, this.state.masterBrewList, { [newBrewId]: newBrew });
     this.setState({masterBrewList: newMasterBrewList});
+  }
+
+  handleChangingSelectedBrew(brewId)
+  {
+    this.setState({selectedTicket: brewId});
   }
 
 
@@ -83,7 +89,9 @@ class App extends React.Component
             render={(props)=>
               <Admin
                 brewList={this.state.masterBrewList}
-                currentRoute={props.location.pathname} />} />
+                currentRoute={props.location.pathname}
+                onChangingSelectedBrew={this.handleChangingSelectedBrew}
+                selectedBrew={this.state.selectedBrew} />} />
           <Route
             exact path='/admin/newbrew'
             render={()=>

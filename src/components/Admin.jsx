@@ -3,9 +3,15 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import BrewList from './BrewList';
+import EditBrew from './EditBrew';
 
 function Admin(props)
 {
+  let editBrewSection = null;
+  if(props.selectedBrew != null)
+  {
+    editBrewSection = <EditBrew selectedBrew={props.brewList[props.selectedBrew]} />;
+  }
   return (
     <div>
       <style jsx>{`
@@ -15,14 +21,19 @@ function Admin(props)
       `}</style>
       <h2>Admin</h2>
       <h3><Link to='/admin/newbrew'>Add New Brew</Link></h3>
-      <BrewList brewList={props.brewList} />
+      {editBrewSection}
+      <BrewList
+        brewList={props.brewList}
+        onBrewSelection={props.onChangingSelectedBrew} />
     </div>
   );
 }
 
 Admin.propTypes = {
   brewList: PropTypes.object,
-  currentRoute: PropTypes.string
+  currentRoute: PropTypes.string,
+  onChangingSelectedBrew: PropTypes.func.isRequired,
+  selectedBrew: PropTypes.string
 };
 
 export default Admin;

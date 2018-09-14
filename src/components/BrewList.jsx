@@ -18,6 +18,7 @@ function BrewList(props){
           price={brew.price}
           remaining={brew.remaining}
           currentRoute={props.currentRoute}
+          onBrewSelection={props.onBrewSelection}
           key={brewId}
           brewId={brewId}/>
       })}
@@ -27,7 +28,8 @@ function BrewList(props){
 
 BrewList.propTypes = {
   brewList: PropTypes.object,
-  currentRoute: PropTypes.string
+  currentRoute: PropTypes.string,
+  onBrewSelection: PropTypes.func
 };
 
 export default BrewList;
