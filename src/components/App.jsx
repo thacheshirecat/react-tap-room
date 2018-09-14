@@ -35,7 +35,8 @@ class App extends React.Component
           remaining: '60'
         }
       },
-      selectedBrew: null
+      selectedBrew: null,
+      sessionSales: '0'
     };
     this.handleAddingNewBrew = this.handleAddingNewBrew.bind(this);
     this.handleChangingSelectedBrew = this.handleChangingSelectedBrew.bind(this);
@@ -95,7 +96,8 @@ class App extends React.Component
             render={(props)=>
               <BrewList
                 brewList={this.state.masterBrewList}
-                currentRoute={props.location.pathname} />} />
+                currentRoute={props.location.pathname}
+                sessionSales={this.state.sessionSales} />} />
           <Route exact path='/about' component={About} />
           <Route
             exact path='/admin'
@@ -106,7 +108,8 @@ class App extends React.Component
                 onChangingSelectedBrew={this.handleChangingSelectedBrew}
                 handleEditBrewFormSubmit={this.handleEditingSelectedBrew}
                 handleCancelBrewEdit={this.handleSettingSelectedBrewToNull}
-                selectedBrew={this.state.selectedBrew} />} />
+                selectedBrew={this.state.selectedBrew}
+                sessionSales={this.state.sessionSales} />} />
           <Route
             exact path='/admin/newbrew'
             render={()=>

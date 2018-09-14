@@ -32,7 +32,8 @@ function Admin(props)
       {editBrewSection}
       <BrewList
         brewList={props.brewList}
-        onBrewSelection={props.onChangingSelectedBrew} />
+        onBrewSelection={props.onChangingSelectedBrew}
+        sessionSales={props.sessionSales} />
     </div>
   );
 }
@@ -43,7 +44,8 @@ Admin.propTypes = {
   onChangingSelectedBrew: PropTypes.func.isRequired,
   handleEditBrewFormSubmit: PropTypes.func.isRequired,
   handleCancelBrewEdit: PropTypes.func.isRequired,
-  selectedBrew: PropTypes.string
+  selectedBrew: PropTypes.string,
+  sessionSales: PropTypes.string
 };
 
 export default Admin;
