@@ -50,7 +50,7 @@ class App extends React.Component
 
   handleChangingSelectedBrew(brewId)
   {
-    this.setState({selectedTicket: brewId});
+    this.setState({selectedBrew: brewId});
   }
 
 
