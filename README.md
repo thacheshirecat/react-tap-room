@@ -8,15 +8,17 @@
 ### Project Overview
   * This project was created using React. It is a review of the fundamentals of React including components, props and routing.
   * Project is to recreate an existing project made using Angular.js of a Tap Room app
-  * Project is only front end, no back end functionality at this point
 
 #### Specs
   * App should display a header above each page
   * App should open to a Home page
   * App should allow user to navigate to list of brews
-  * App should allow user to navigate to a form for adding new brews (no functionality currently)
   * App should allow users to navigate to an About Us page
   * App should include an error 404 page for incorrect paths
+  * App should include an Admin page that includes the list of brews with a button to edit each brew
+  * App should include a new brew form through the admin page that allows a user to add a new brew to the list
+  * App should allow the user to sell a pint of brew from the brew list page and have the amount be deducted from the remaining total of that given brew
+  * App should calculate how much money has been made in sales in a given session
 
 ##### Set Up and Installation
   * Clone repository from https://github.com/thacheshirecat/react-tap-room
