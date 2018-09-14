@@ -37,6 +37,7 @@ class App extends React.Component
       },
       selectedBrew: null
     };
+    this.handleAddingNewBrew = this.handleAddingNewBrew.bind(this);
   }
 
   handleAddingNewBrew(newBrew)
