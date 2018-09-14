@@ -6,8 +6,8 @@
   * Alex Bunnell
 
 ### Project Overview
-  * This project was created using React. It is a review of the fundamentals of React including components, props and routing.
-  * Project is to recreate an existing project made using Angular.js of a Tap Room app
+  * This project was created using React. It is a review of the fundamentals of React including components, props, routing, state and data flow.
+  * Project is to recreate an existing project made using Angular.js of a Tap Room app/employee terminal
 
 #### Specs
   * App should display a header above each page
@@ -29,6 +29,7 @@
 ##### Issues / Questions
   * At this point there have not been any unforeseen issues in the development process. Installation and set up of the React Environment went smoothly, each component has been working as intended.
   * One question is whether global jsx styling can be added to child components or only the App component? If I add global styling to a child of App, would only that child and any of that child's children get those 'global' styling rules? I initial added global styling rules to Home which was a child of App but had no children, then later had to move those 'global' rules up into App.
+  * Continuing from last week there were no unforeseen issues or hang ups, mostly just syntax errors that held me up this week. I feel as though the way I handle editing and selling pints is not the best practice way to go about manipulating state data but I was unsure how else to get this to function.
 
 ##### Thoughts on React vs Angular
   * React is interesting. When first starting Angular I enjoyed the analogy to learning how to operate certain types of machinery. Learning basic JS and JQuery was like learning to drive a manual car for the first time, some hiccups but overall not too difficult. When we started heading towards Angular by learning Node that felt like it was more like learning how to fly a plane, a lot of dials a nobs to turn before take off, however once you got there the mechanics of flying were pretty smooth. Once we actually got to Angular it felt more like trying to operate a Gundam in space (reference: https://pre00.deviantart.net/831a/th/pre/f/2007/120/f/9/hi_nu_gundam_space_saber_by_zpaolo.jpg). Very powerful, but a lot to take in and try and link up and understand in order to produce the desired results. React is interesting in that, at least here in the first parts before back end functionality, it does not feel like stepping into a super complicated framework, yet it does still feel powerful. It feels more like using Node, a bit of set up and then somewhat smooth sailing, without all of the complexities of Angular but many of the advantages.
