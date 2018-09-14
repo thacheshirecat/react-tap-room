@@ -10,7 +10,13 @@ function Admin(props)
   let editBrewSection = null;
   if(props.selectedBrew != null)
   {
-    editBrewSection = <EditBrew selectedBrew={props.brewList[props.selectedBrew]} />;
+    editBrewSection = <EditBrew
+      selectedBrew={props.brewList[props.selectedBrew]}
+      onCancelBrewEdit={props.handleCancelBrewEdit} />;
+  }
+  else
+  {
+    editBrewSection = null;
   }
   return (
     <div>
@@ -33,6 +39,7 @@ Admin.propTypes = {
   brewList: PropTypes.object,
   currentRoute: PropTypes.string,
   onChangingSelectedBrew: PropTypes.func.isRequired,
+  handleCancelBrewEdit: PropTypes.func.isRequired,
   selectedBrew: PropTypes.string
 };
 

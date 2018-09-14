@@ -39,6 +39,7 @@ class App extends React.Component
     };
     this.handleAddingNewBrew = this.handleAddingNewBrew.bind(this);
     this.handleChangingSelectedBrew = this.handleChangingSelectedBrew.bind(this);
+    this.handleSettingSelectedBrewToNull = this.handleSettingSelectedBrewToNull.bind(this);
   }
 
   handleAddingNewBrew(newBrew)
@@ -51,6 +52,11 @@ class App extends React.Component
   handleChangingSelectedBrew(brewId)
   {
     this.setState({selectedBrew: brewId});
+  }
+
+  handleSettingSelectedBrewToNull()
+  {
+    this.setState({selectedBrew: null});
   }
 
 
@@ -91,6 +97,7 @@ class App extends React.Component
                 brewList={this.state.masterBrewList}
                 currentRoute={props.location.pathname}
                 onChangingSelectedBrew={this.handleChangingSelectedBrew}
+                handleCancelBrewEdit={this.handleSettingSelectedBrewToNull}
                 selectedBrew={this.state.selectedBrew} />} />
           <Route
             exact path='/admin/newbrew'

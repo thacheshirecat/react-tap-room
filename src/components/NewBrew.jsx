@@ -25,50 +25,55 @@ function handleNewBrewFormSubmit(event)
   return(
     <div>
       <style jsx>{`
+          input, button, label {
+
+            color: green;
+            justify-content: center;
+            margin: auto;
+            display: flex;
+          }
           input, button {
             background-color: gold;
-            color: green;
           }
       `}</style>
       <h2>Add a New Brew to the Tap Room</h2>
       <form onSubmit={handleNewBrewFormSubmit}>
-        <label for='newName'>Brew Name</label><br/>
+        <label htmlFor='newName'>Brew Name</label>
         <input
           type='text'
           name='newName'
           ref={(input) => {_name = input;}}
           required /><br/>
-        <label for='newAbv'>Alchohol Content</label><br/>
+        <label htmlFor='newAbv'>Alchohol Content</label>
         <input
           type='text'
           name='newAbv'
           ref={(input) => {_abv = input;}}
           required /><br/>
-        <label for='newBrewer'>Brewer Name</label><br/>
+        <label htmlFor='newBrewer'>Brewer Name</label>
         <input
           type='text'
           name='newBrewer'
           ref={(input) => {_brewer = input;}}
           required /><br/>
-        <label for='newPrice'>Price</label><br/>
+        <label htmlFor='newPrice'>Price</label>
         <input
           type='text'
           name='newPrice'
           ref={(input) => {_price = input;}}
           required /><br/>
-        <label for='newAmount'>Amount to Add</label><br/>
+        <label htmlFor='newAmount'>Amount to Add</label>
         <input
           type='text'
           name='newAmount'
           ref={(input) => {_remaining = input;}}
           required /><br/>
-        <label for='newDescription'>Description</label><br/>
+        <label htmlFor='newDescription'>Description</label>
         <input
           type='text'
           name='newDescription'
           ref={(input) => {_description = input;}}
           required /><br/>
-        <br/>
         <button type='submit'>Add!</button>
       </form>
     </div>
