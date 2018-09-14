@@ -17,15 +17,17 @@ function BrewList(props){
           abv={brew.abv}
           price={brew.price}
           remaining={brew.remaining}
+          currentRoute={props.currentRoute}
           key={brewId}
           brewId={brewId}/>
-      })}      
+      })}
     </div>
   );
 }
 
 BrewList.propTypes = {
-  brewList: PropTypes.object
+  brewList: PropTypes.object,
+  currentRoute: PropTypes.string
 };
 
 export default BrewList;

@@ -65,10 +65,17 @@ class App extends React.Component
           <Route exact path='/' component={Home} />
           <Route
             exact path='/brews'
-            render={()=>
-              <BrewList brewList={this.state.masterBrewList} />} />
+            render={(props)=>
+              <BrewList
+                brewList={this.state.masterBrewList}
+                currentRoute={props.location.pathname} />} />
           <Route exact path='/about' component={About} />
-          <Route exact path='/admin' component={Admin} />
+          <Route
+            exact path='/admin'
+            render={(props)=>
+              <Admin
+                brewList={this.state.masterBrewList}
+                currentRoute={props.location.pathname} />} />
           <Route exact path='/admin/newbrew' component={NewBrew} />
           <Route component={Error404} />
         </Switch>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import BrewList from './BrewList';
@@ -14,9 +15,13 @@ function Admin(props)
       `}</style>
       <h2>Admin</h2>
       <h3><Link to='/admin/newbrew'>Add New Brew</Link></h3>
-      <BrewList />
+      <BrewList brewList={props.BrewList} />
     </div>
   );
 }
+
+Admin.propTypes = {
+  brewList: PropTypes.object
+};
 
 export default Admin;
