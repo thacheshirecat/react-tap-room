@@ -10,17 +10,17 @@ function NewBrew(props)
   let _remaining = null;
   let _description = null;
 
-function handleNewBrewFormSubmit(event)
-{
-  event.preventDefault();
-  props.onNewBrewFormSubmit({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value});
-  _name.value = '';
-  _abv.value = '';
-  _brewer.value = '';
-  _price.value = '';
-  _remaining.value = '';
-  _description.value = '';
-}
+  function handleNewBrewFormSubmit(event)
+  {
+    event.preventDefault();
+    props.onNewBrewFormSubmit({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value});
+    _name.value = '';
+    _abv.value = '';
+    _brewer.value = '';
+    _price.value = '';
+    _remaining.value = '';
+    _description.value = '';
+  }
 
   return(
     <div>
@@ -81,7 +81,7 @@ function handleNewBrewFormSubmit(event)
 }
 
 NewBrew.propTypes = {
- onNewBrewFormSubmit: PropTypes.func
+  onNewBrewFormSubmit: PropTypes.func
 };
 
 export default NewBrew;

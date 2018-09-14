@@ -26,7 +26,7 @@ function EditBrew(props)
             display: flex;
           }
       `}</style>
-    <h2>Edit Brew: {props.selectedBrew.name}</h2>
+      <h2>Edit Brew: {props.selectedBrew.name}</h2>
       <form onSubmit={handleBrewFormSubmit}>
         <label htmlFor='newName'>Brew Name</label>
         <input
@@ -82,6 +82,6 @@ EditBrew.propTypes = {
   selectedBrew: PropTypes.object,
   onBrewFormSubmit: PropTypes.func,
   onCancelBrewEdit: PropTypes.func
-}
+};
 
 export default EditBrew;

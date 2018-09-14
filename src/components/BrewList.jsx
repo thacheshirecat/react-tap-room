@@ -9,7 +9,7 @@ function BrewList(props)
     <div>
       <h2>Brews</h2>
       <hr />
-        <h4>Today's Sales: ${props.sessionSales}</h4>
+      <h4>Today's Sales: ${props.sessionSales}</h4>
       <hr />
       {Object.keys(props.brewList).map(function(brewId) {
         var brew = props.brewList[brewId];
@@ -24,7 +24,7 @@ function BrewList(props)
           onBrewSelection={props.onBrewSelection}
           onSellPintButtonClicked={props.handleSellingPint}
           key={brewId}
-          brewId={brewId}/>
+          brewId={brewId}/>;
       })}
     </div>
   );

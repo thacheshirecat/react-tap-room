@@ -22,7 +22,7 @@ function Brew(props){
   {
     return (
       <div>
-      <style jsx>{`
+        <style jsx>{`
           .btn {
             display: flex;
             justify-content: center;
@@ -33,8 +33,8 @@ function Brew(props){
         {brewInfo}
         <button
           onClick={() =>
-            {props.onSellPintButtonClicked(props.brewId);}}
-            className='btn btn-danger'>
+          {props.onSellPintButtonClicked(props.brewId);}}
+          className='btn btn-danger'>
             Sell Pint</button>
         <hr />
       </div>
@@ -44,7 +44,7 @@ function Brew(props){
   {
     return (
       <div>
-      <style jsx>{`
+        <style jsx>{`
           .btn {
             display: flex;
             justify-content: center;
@@ -55,8 +55,8 @@ function Brew(props){
         {brewInfo}
         <button
           onClick={() =>
-            {props.onBrewSelection(props.brewId);}}
-            className='btn btn-warning'>
+          {props.onBrewSelection(props.brewId);}}
+          className='btn btn-warning'>
             Edit Brew</button>
         <hr />
       </div>
