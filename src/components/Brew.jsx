@@ -16,15 +16,23 @@ function Brew(props){
     <p>By: {props.brewer}</p>
     <p>Price: ${props.price} per Pint</p>
     <p>Remaining Stock: {props.remaining} Pints</p>
-
   </div>;
 
   if (props.currentRoute === '/brews')
   {
     return (
       <div>
+      <style jsx>{`
+          .btn {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 50%;
+          }
+      `}</style>
         {brewInfo}
         <button className='btn btn-danger'>Sell Pint</button>
+        <hr />
       </div>
     );
   }
@@ -32,8 +40,17 @@ function Brew(props){
   {
     return (
       <div>
+      <style jsx>{`
+          .btn {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 50%;
+          }
+      `}</style>
         {brewInfo}
         <button className='btn btn-warning'>Edit Brew</button>
+        <hr />
       </div>
     );
   }

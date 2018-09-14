@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Brew from './Brew';
 
 function BrewList(props){
-  console.log(props.brewList)
   return(
     <div>
       <h2>Brews</h2>

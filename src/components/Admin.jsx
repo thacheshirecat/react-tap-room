@@ -6,7 +6,6 @@ import BrewList from './BrewList';
 
 function Admin(props)
 {
-  console.log(props.brewList)
   return (
     <div>
       <style jsx>{`
