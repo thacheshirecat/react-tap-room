@@ -10,6 +10,10 @@ function EditBrew(props)
   let _remaining = null;
   let _description = null;
 
+  function handleBrewFormSubmit()
+  {
+    props.handleBrewFormSubmit();
+  }
 
   return(
     <div className='card'>
@@ -23,7 +27,7 @@ function EditBrew(props)
           }
       `}</style>
     <h2>Edit Brew: {props.selectedBrew.name}</h2>
-      <htmlForm>
+      <form onSubmit={handleBrewFormSubmit}>
         <label htmlFor='newName'>Brew Name</label>
         <input
           type='text'
@@ -68,7 +72,7 @@ function EditBrew(props)
           required /><br/>
         <br/>
         <button type='submit'>Edit!</button>
-      </htmlForm>
+      </form>
       <button type='click' onClick={() => {props.onCancelBrewEdit();}}>Cancel</button>
     </div>
   );
@@ -76,6 +80,7 @@ function EditBrew(props)
 
 EditBrew.propTypes = {
   selectedBrew: PropTypes.object,
+  onBrewFormSubmit: PropTypes.func,
   onCancelBrewEdit: PropTypes.func
 }
 

@@ -40,6 +40,7 @@ class App extends React.Component
     this.handleAddingNewBrew = this.handleAddingNewBrew.bind(this);
     this.handleChangingSelectedBrew = this.handleChangingSelectedBrew.bind(this);
     this.handleSettingSelectedBrewToNull = this.handleSettingSelectedBrewToNull.bind(this);
+    this.handleEditingSelectedBrew = this.handleEditingSelectedBrew.bind(this);
   }
 
   handleAddingNewBrew(newBrew)
@@ -47,6 +48,11 @@ class App extends React.Component
     let newBrewId = v4();
     let newMasterBrewList = Object.assign({}, this.state.masterBrewList, { [newBrewId]: newBrew });
     this.setState({masterBrewList: newMasterBrewList});
+  }
+
+  handleEditingSelectedBrew(edittedBrew)
+  {
+    this.setState({selectedBrew: null});
   }
 
   handleChangingSelectedBrew(brewId)
@@ -97,6 +103,7 @@ class App extends React.Component
                 brewList={this.state.masterBrewList}
                 currentRoute={props.location.pathname}
                 onChangingSelectedBrew={this.handleChangingSelectedBrew}
+                handleEditBrewFormSubmit={this.handleEditingSelectedBrew}
                 handleCancelBrewEdit={this.handleSettingSelectedBrewToNull}
                 selectedBrew={this.state.selectedBrew} />} />
           <Route

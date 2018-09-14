@@ -7,11 +7,13 @@ import EditBrew from './EditBrew';
 
 function Admin(props)
 {
+
   let editBrewSection = null;
   if(props.selectedBrew != null)
   {
     editBrewSection = <EditBrew
       selectedBrew={props.brewList[props.selectedBrew]}
+      onBrewFormSubmit={props.handleEditBrewFormSubmit}
       onCancelBrewEdit={props.handleCancelBrewEdit} />;
   }
   else
@@ -39,6 +41,7 @@ Admin.propTypes = {
   brewList: PropTypes.object,
   currentRoute: PropTypes.string,
   onChangingSelectedBrew: PropTypes.func.isRequired,
+  handleEditBrewFormSubmit: PropTypes.func.isRequired,
   handleCancelBrewEdit: PropTypes.func.isRequired,
   selectedBrew: PropTypes.string
 };
