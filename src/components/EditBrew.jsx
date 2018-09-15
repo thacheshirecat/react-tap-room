@@ -33,42 +33,42 @@ function EditBrew(props)
           type='text'
           name='newName'
           ref={(input) => {_name = input;}}
-          placeholder={props.selectedBrew.name}
+          value={props.selectedBrew.name}
           required></input><br/>
         <label htmlFor='newAbv'>Alchohol Content</label>
         <input
           type='text'
           name='newAbv'
           ref={(input) => {_abv = input;}}
-          placeholder={props.selectedBrew.abv}
+          value={props.selectedBrew.abv}
           required /><br/>
         <label htmlFor='newBrewer'>Brewer Name</label>
         <input
           type='text'
           name='newBrewer'
           ref={(input) => {_brewer = input;}}
-          placeholder={props.selectedBrew.brewer}
+          value={props.selectedBrew.brewer}
           required /><br/>
         <label htmlFor='newPrice'>Price</label>
         <input
           type='text'
           name='newPrice'
           ref={(input) => {_price = input;}}
-          placeholder={props.selectedBrew.price}
+          value={props.selectedBrew.price}
           required /><br/>
         <label htmlFor='newAmount'>Amount Remaining</label>
         <input
           type='text'
           name='newAmount'
           ref={(input) => {_remaining = input;}}
-          placeholder={props.selectedBrew.remaining}
+          value={props.selectedBrew.remaining}
           required /><br/>
         <label htmlFor='newDescription'>Description</label>
         <input
           type='text'
           name='newDescription'
           ref={(input) => {_description = input;}}
-          placeholder={props.selectedBrew.description}
+          value={props.selectedBrew.description}
           required /><br/>
         <br/>
         <button type='submit'>Edit!</button>
